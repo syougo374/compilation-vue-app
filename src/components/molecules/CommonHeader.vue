@@ -1,6 +1,7 @@
 <template>
-  <header>
+  <header class="flex justify-between">
     <h1 class="text-3xl font-serif italic">{{ headerTitle }}</h1>
+    <router-link class="text-blue-500" to="/test">test page</router-link>
   </header>
   <btnCom class="mr-3 mt-3" @click="firstClick" btn-name="clickして1"></btnCom>
   <btnCom class="mr-3 mt-3" @click="secondClick" btn-name="clickして2"></btnCom>
