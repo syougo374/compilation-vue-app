@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import btnCom from '@/plugins/atoms/buttons/BPrimaryBtn.vue'
+import btnCom from '@/components/atoms/buttons/BPrimaryBtn.vue'
 export default{
   data(){
     return {

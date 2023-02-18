@@ -1,5 +1,6 @@
 <template>
-  <button class="bg-gradient-to-b from-green-200 to-green-800 hover:bg-gradient-to-l text-white rounded px-4 py-2">{{ btnName }}</button>
+  <button class="shadow-lg bg-pink-500 shadow-pink-500/50 text-white rounded px-2 py-1">{{ btnName }}</button>
+
 </template>
 <script>
   export default {
