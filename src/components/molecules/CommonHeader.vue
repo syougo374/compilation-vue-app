@@ -1,16 +1,12 @@
 <template>
   <header class="flex justify-between">
     <h1 class="text-3xl font-serif italic">{{ headerTitle }}</h1>
-    <router-link class="text-blue-500" to="/test">test page</router-link>
   </header>
-  <!-- <btnCom class="mr-3 mt-3" @click="firstClick" btn-name="clickして1"></btnCom>
-  <btnCom class="mr-3 mt-3" @click="secondClick" btn-name="clickして2"></btnCom>
-  <btnCom class="mr-3 mt-3" @click="theadClick" btn-name="clickして3"></btnCom>
-  <h1 class="text-3xl">{{ msg }}</h1> -->
+  <CommonMenuBar class="test mr-5 absolute top-1.5"></CommonMenuBar>
 </template>
 
 <script>
-// import btnCom from '@/components/atoms/buttons/BPrimaryBtn.vue'
+import CommonMenuBar from '@/components/molecules/CommonMenuBar'
 export default{
   data(){
     return {
@@ -24,18 +20,10 @@ export default{
     }
   },
   components: {
-    // btnCom,
+    CommonMenuBar,
   },
   methods: {
-    // firstClick(){
-    //   this.msg='first';
-    // },
-    // secondClick(){
-    //   this.msg='second';
-    // },
-    // theadClick(){
-    //   this.msg='thead';
-    // }
+
   }
 }
 
@@ -47,5 +35,8 @@ export default{
   }
   h1 {
     margin: 0;
+  }
+  .test {
+    left: 90%;
   }
 </style>
