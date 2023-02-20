@@ -12,7 +12,6 @@ import CommonHeader from '@/components/molecules/CommonHeader.vue'
 export default {
   components: {
     CommonHeader,
-
   }
 }
 </script>
