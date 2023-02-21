@@ -1,6 +1,7 @@
 <template>
   <div class="main-area cursor-pointer" @click="isShow = !isShow">
     <div class="bars" >
+      <p>メニュー</p>
       <div class="bar1"></div>
       <div class="bar2"></div>
       <div class="bar3"></div>
@@ -26,7 +27,7 @@ export default {
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 .fade-enter-from {
   opacity: 0;
@@ -54,22 +55,16 @@ export default {
 
   }
 
-  .bar1 {
-    width: 30px;
-    height: 5px;
-    background-color:gray;
-    margin-top:3px;
+  .bars{
+    & > p {
+      font-size:1px;
+    }
+    & >.bar1, .bar2, .bar3 {
+      width: 30px;
+      height: 3px;
+      background-color:rgb(250, 140, 44);
+      margin-top:3px;
+    }
   }
-  .bar2 {
-    width: 30px;
-    height: 5px;
-    background-color:gray;
-    margin-top:3px;
-  }
-  .bar3 {
-    width: 30px;
-    height: 5px;
-    background-color:gray;
-    margin-top:3px;
-  }
+
 </style>
