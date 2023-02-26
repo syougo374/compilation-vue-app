@@ -3,7 +3,7 @@ import CommonHeader from '../molecules/CommonHeader.vue';
 
 <template>
   <CommonHeader headerTitle="HOME'S"></CommonHeader>
-  <div class="header-gray bg-gray-100"></div>
+  <div class="header-gray  sm:bg-red-200 md:bg-yellow-200 lg:bg-gray-100"></div>
   <div class="main_container">
 
     <section class="grid grid-cols-2">

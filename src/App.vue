@@ -1,6 +1,9 @@
 <template>
-  <router-view></router-view>
-  <CommonFooter></CommonFooter>
+  <!-- sm:bg-red-200 md:bg-yellow-200 lg:bg-green-200 xl:bg-blue-200 動き確認用 -->
+  <div class="w-full w-screen">
+    <router-view></router-view>
+    <CommonFooter></CommonFooter>
+  </div>
 </template>
 
 <script>
@@ -16,7 +19,6 @@ export default {
 <style>
   body {
     margin: 0;
-    width: 100%;
     min-height: 100vh;
   }
 </style>

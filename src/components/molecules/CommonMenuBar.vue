@@ -8,9 +8,9 @@
     </div>
     <transition name="fade" mode="out-in">
       <div v-if="isShow" class="flex flex-col bg-gray-200 pr-3 delay-75" fade>
-        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/home">Home</router-link>
-        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/signup">SignUp</router-link>
-        <router-link active-class="actice" exact class="w-20 text-center mb-3 mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="login">Login</router-link>
+        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/lifullHomes">lifullHomes</router-link>
+        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/">Home</router-link>
+        <router-link active-class="actice" exact class="w-20 text-center mb-3 mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/">Home</router-link>
       </div>
     </transition>
   </div>
