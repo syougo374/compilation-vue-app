@@ -13,15 +13,21 @@
         <p>vue 集大成 金木くんです</p>
       </article>
     </section>
+    <Form font-size="30px"
+          bg-color="bg-red-500"
+          color="pink"
+    >
+    </Form>
   </div>
 </template>
 
 <script>
 import CommonHeader from '@/components/molecules/CommonHeader.vue'
-
+import Form from '@/components/atoms/forms/BForm.vue'
 export default {
   components: {
     CommonHeader,
+    Form,
   }
 }
 </script>
