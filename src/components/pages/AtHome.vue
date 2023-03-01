@@ -18,16 +18,25 @@
           color="pink"
     >
     </Form>
+    <p>{{ $store.state.count }}</p>
+    <BPrimary @click="increment">btn</BPrimary>
   </div>
 </template>
 
 <script>
 import CommonHeader from '@/components/molecules/CommonHeader.vue'
 import Form from '@/components/atoms/forms/BForm.vue'
+import BPrimary from '@/components/atoms/buttons/BPrimaryBtn.vue'
 export default {
   components: {
     CommonHeader,
     Form,
+    BPrimary,
+  },
+  methods: {
+    increment(){
+      this.$store.commit('increment');
+    }
   }
 }
 </script>
