@@ -20,14 +20,26 @@
     </Form>
     <p>{{ $store.state.count }}</p>
     <BPrimary @click="increment">btn</BPrimary>
+    <button class="bg-blue-500 ml-3" @click="apiTest">getTestBtn</button>
+    <button class="bg-green-500 ml-3" @click="postApi">postTestBtn</button>
   </div>
+  <h2>{{ result }}</h2>
 </template>
 
 <script>
 import CommonHeader from '@/components/molecules/CommonHeader.vue'
 import Form from '@/components/atoms/forms/BForm.vue'
 import BPrimary from '@/components/atoms/buttons/BPrimaryBtn.vue'
+import axios from '@/axios.js'
 export default {
+  data(){
+    return {
+      data: {
+        name:"vueから愛を込めて",
+      },
+      result: "",
+    }
+  },
   components: {
     CommonHeader,
     Form,
@@ -36,6 +48,26 @@ export default {
   methods: {
     increment(){
       this.$store.commit('increment');
+    },
+    apiTest(){
+      axios.get("/getTest")
+      .then((response) =>{
+        this.result = response.data;
+        console.log(response);
+      })
+      .catch((error) =>{
+        console.log("失敗しましたよ");
+        console.log(error);
+      })
+    },
+    postApi(){
+      axios.post("/postTest",this.data)
+      .then((response) =>{
+        console.log(response);
+      })
+      .catch((error) =>{
+        console.log(error);
+      });
     }
   }
 }

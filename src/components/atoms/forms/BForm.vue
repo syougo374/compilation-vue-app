@@ -1,18 +1,27 @@
 <template>
-  <input type="text" v-model="test" :style="styles">
-  <input:button type="button"
-                :class="bgColor" 
+  <label>first_name</label>
+  <input type="text" v-model="item.first_name" :style="styles">
+  <label>last_name</label>
+  <input type="text" v-model="item.last_name" :style="styles">
+  <input:button :class="bgColor"
                 class="shadow-lg shadow-teal-500/50 text-white rounded px-2 py-1"
-                @click="test = ''"
+                @click="postName"
   >btn</input:button>
-  <p :style="styles">{{ test }}</p>
+
+  <p :style="styles">first_name: {{ item.first_name }}</p>
+  <p :style="styles">last_name: {{ item.last_name }}</p>
 </template>
 
 <script>
+import axios from "@/axios";
+
   export default {
     data (){
       return {
-        test: '',
+        item: {
+          first_name: "",
+          last_name: "",
+        },
         styles: {
           'font-size': this.$props.fontSize,
           color: this.$props.color,
@@ -33,6 +42,19 @@
         default: 'bg-teal-500'
       }
     },
+    methods: {
+      postName(){
+        axios.post("/postTest", this.item)
+        .then((response) => {
+          this.item.first_name = "";
+          this.item.lastName = "";
+          console.log(response);
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+      },
+    }
   }
 </script>
 
