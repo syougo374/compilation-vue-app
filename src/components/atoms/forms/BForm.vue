@@ -45,10 +45,10 @@ import axios from "@/axios";
     methods: {
       postName(){
         axios.post("/postTest", this.item)
-        .then((response) => {
+        .then(() => {
           this.item.first_name = "";
-          this.item.lastName = "";
-          console.log(response);
+          this.item.last_name = "";
+          this.$router.push("/index")
         })
         .catch((error) => {
           console.log(error);

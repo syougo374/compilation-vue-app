@@ -8,9 +8,9 @@
     </div>
     <transition name="fade" mode="out-in">
       <div v-if="isShow" class="flex flex-col bg-gray-200 pr-3 delay-75" fade>
-        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/lifullHomes">lifullHomes</router-link>
-        <router-link active-class="actice" exact class="w-20 text-center mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/">Home</router-link>
-        <router-link active-class="actice" exact class="w-20 text-center mb-3 mt-3 ml-3 ml-4shadow-lg bg-orange-500 shadow-orange-500/50 text-white rounded px-2 py-1 hover:text-gray-600" to="/">Home</router-link>
+        <router-link active-class="actice" :class="menu_style" exact class="mb-3 " to="/">Home</router-link>
+        <router-link active-class="actice" :class="menu_style" exact class="mt-3" to="/lifullHomes">lifullHomes</router-link>
+        <router-link active-class="actice" :class="menu_style" exact class="mt-3" to="/index">DbIndex</router-link>
       </div>
     </transition>
   </div>
@@ -21,6 +21,20 @@ export default {
   data(){
     return {
       isShow: false,
+      "menu_style":[
+        "mt-3",
+        "ml-3",
+        "ml-4shadow-lg",
+        "bg-orange-500",
+        "shadow-orange-500/50",
+        "text-white",
+        "rounded",
+        "px-2",
+        "py-1",
+        "hover:text-gray-600",
+        "w-20",
+        "text-center",
+      ]
     }
   }
 }
@@ -48,8 +62,8 @@ export default {
   opacity: 0;
 }
 .actice {
-  color: red;
-  background-color: black;
+  color: rgba(0, 0, 0, 0.674);
+  background-color: rgba(117, 200, 251, 0.44);
 }
   .main-area {
 
