@@ -16,10 +16,12 @@
       </tbody>
     </table>
   </div>
+  <postZipCode></postZipCode>
 </template>
 
 <script>
 import Header from "@/components/molecules/CommonHeader.vue";
+import postZipCode from "@/components/atoms/forms/ZipCodeForm.vue";
 import axios from "@/axios";
 export default({
   data(){
@@ -33,6 +35,7 @@ export default({
   },
   components: {
     Header,
+    postZipCode,
   },
   computed: {
   },
@@ -40,7 +43,7 @@ export default({
     axios.get('/getIndex')
     .then((response) =>{
       this.names = response.data;
-      console.log(response);
+      // console.log(response);
     })
     .catch((error) =>{
       console.log(error);
