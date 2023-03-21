@@ -10,10 +10,13 @@
     </div>
 
     <slot name="lifullHomes"></slot>
-    <div class="links grid grid-cols-3">
+    <div class="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-3">
       <CommonHistroy></CommonHistroy>
       <CommonLike></CommonLike>
-      <CommonMenuBar></CommonMenuBar>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/userInfo">UserInfo</RouterLink>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/index">Index</RouterLink>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/lifullHomes">lifullHomes</RouterLink>
+      <CommonMenuBar class="lg:hidden md:hidden"></CommonMenuBar>
     </div>
   </header>
 </template>
@@ -26,6 +29,11 @@ export default{
   data(){
     return {
       msg: "default",
+      hiddenStyle: [
+        "hidden",
+        "lg:inline-block",
+        "md:inline-block",
+      ]
     }
   },
   props: {
@@ -52,5 +60,12 @@ export default{
   }
   h1 {
     margin: 0;
+  }
+  .links {
+    color: blue;
+  }
+  .actice {
+    background-color: rgba(249, 168, 102, 0.3);
+    color: green
   }
 </style>

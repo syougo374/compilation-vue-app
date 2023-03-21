@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 const UserInfo = () => import('@/components/pages/UserInfo.vue');
 const LifullHomes = () => import('@/components/pages/LifullHomes.vue');
 const DbIndex = () => import('@/components/pages/DbIndex.vue');
+const UserShow = () => import('@/components/pages/UserShow.vue');
 
 export default createRouter({
   history: createWebHistory(process.env.BASE_URL),
@@ -22,5 +23,10 @@ export default createRouter({
       name: 'index',
       component: DbIndex,
     },
+    {
+      path: "/userShow",
+      name: "userShow",
+      component: UserShow,
+    }
   ]
 })
