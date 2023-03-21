@@ -8,24 +8,8 @@
         <h1 class="text-orange-500 text-3xl font-serif italic">{{ headerTitle }}</h1>
       </div>
     </div>
-    <div class="sublinks zero:hidden lg:inline-flex">
-      <div>
-        <p>借りる</p>
-        <h3>賃貸</h3>
-      </div>
-      <div>
-        <p>マンションを買う</p>
-        <h3>新築  中古</h3>
-      </div>
-      <div>
-        <p>一戸建を買う</p>
-        <h3>新築 中古 土地 注文住宅</h3>
-      </div>
-      <div>
-        <P>&nbsp;</P>
-        <h3>売却査定 投資 引越し</h3>
-      </div>
-    </div>
+
+    <slot name="lifullHomes"></slot>
     <div class="links grid grid-cols-3">
       <CommonHistroy></CommonHistroy>
       <CommonLike></CommonLike>
@@ -68,15 +52,5 @@ export default{
   }
   h1 {
     margin: 0;
-  }
-  .sublinks{
-    & > div {
-      margin-right: 20px;
-    }
-    & > div > p{
-      display: block;
-      font-size: 12px;
-      color: gray;
-    }
   }
 </style>

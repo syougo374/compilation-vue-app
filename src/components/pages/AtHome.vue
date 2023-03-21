@@ -1,5 +1,5 @@
 <template>
-  <CommonHeader header-title="HOME PAGE"></CommonHeader>
+  <!-- <CommonHeader header-title="HOME PAGE"></CommonHeader> -->
   <div class="main-contents">
     <section class="grid grid-cols-2">
       <article class="text-center">
@@ -27,8 +27,8 @@
 </template>
 
 <script>
-import CommonHeader from '@/components/molecules/CommonHeader.vue'
-import Form from '@/components/atoms/forms/BForm.vue'
+// import CommonHeader from '@/components/molecules/CommonHeader.vue'
+// import Form from '@/components/atoms/forms/BForm.vue'
 import BPrimary from '@/components/atoms/buttons/BPrimaryBtn.vue'
 import axios from '@/axios.js'
 export default {
@@ -41,8 +41,8 @@ export default {
     }
   },
   components: {
-    CommonHeader,
-    Form,
+    // CommonHeader,
+    // Form,
     BPrimary,
   },
   methods: {

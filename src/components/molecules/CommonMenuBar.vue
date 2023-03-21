@@ -4,11 +4,11 @@
       <p>メニュー</p>
       <div class="bar1"></div>
       <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar3"></div>  
     </div>
     <transition name="fade" mode="out-in">
-      <div v-if="isShow" class="flex flex-col bg-gray-200 pr-3 delay-75" fade>
-        <router-link active-class="actice" :class="menu_style" exact class="mb-3 " to="/">Home</router-link>
+      <div v-if="isShow" class="z-10 flex flex-col bg-gray-200 pr-3 delay-75" fade>
+        <router-link active-class="actice" :class="menu_style" exact class="mb-3 " to="/userInfo">UserInfo</router-link>
         <router-link active-class="actice" :class="menu_style" exact class="mt-3" to="/lifullHomes">lifullHomes</router-link>
         <router-link active-class="actice" :class="menu_style" exact class="mt-3" to="/index">DbIndex</router-link>
       </div>

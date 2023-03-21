@@ -1,8 +1,4 @@
-
-import CommonHeader from '../molecules/CommonHeader.vue';
-
 <template>
-  <CommonHeader headerTitle="HOME'S"></CommonHeader>
   <div class="header-gray  sm:bg-red-200 md:bg-yellow-200 lg:bg-gray-100"></div>
   <div class="main_container">
 
@@ -74,11 +70,11 @@ import CommonHeader from '../molecules/CommonHeader.vue';
 </template>
 
 <script>
-import CommonHeader from '@/components/molecules/CommonHeader.vue';
+// import CommonHeader from '@/components/molecules/CommonHeader.vue';
 
 export default {
   components: {
-    CommonHeader,
+    // CommonHeader,
   }
 }
 </script>
@@ -97,5 +93,16 @@ export default {
   }
   .header-gray {
     height: 120px;
+  }
+
+  .sublinks{
+    & > div {
+      margin-right: 20px;
+    }
+    & > div > p{
+      display: block;
+      font-size: 12px;
+      color: gray;
+    }
   }
 </style>

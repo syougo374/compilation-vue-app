@@ -1,5 +1,5 @@
 <template>
-  <Header></Header>
+  <!-- <Header></Header> -->
   <div class="text-center mt-10">
     <table class="hover:border-collapse border border-slate-500 w-4/5">
       <thead>
@@ -16,12 +16,12 @@
       </tbody>
     </table>
   </div>
-  <postZipCode></postZipCode>
+  <!-- <postZipCode></postZipCode> -->
 </template>
 
 <script>
-import Header from "@/components/molecules/CommonHeader.vue";
-import postZipCode from "@/components/atoms/forms/ZipCodeForm.vue";
+// import Header from "@/components/molecules/CommonHeader.vue";
+// import postZipCode from "@/components/atoms/forms/ZipCodeForm.vue";
 import axios from "@/axios";
 export default({
   data(){
@@ -34,8 +34,8 @@ export default({
     }
   },
   components: {
-    Header,
-    postZipCode,
+    // Header,
+    // postZipCode,
   },
   computed: {
   },
