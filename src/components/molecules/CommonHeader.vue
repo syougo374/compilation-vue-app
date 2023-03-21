@@ -1,20 +1,39 @@
 <template>
-  <header class="flex justify-between">
-    <h1 class="text-3xl font-serif italic">{{ headerTitle }}</h1>
-    <router-link class="text-blue-500" to="/test">test page</router-link>
+  <div class="h-2 bg-orange-500"></div>
+  <header class="flex justify-between justify-center items-center">
+    <div class="header-title flex justify-center items-center">
+      <img class="h-10 w-10 boject-contain" src="@/assets/images/lifullIcon.png" alt="icon">
+      <div class="ml-2">
+        <p class="text-orange-500">LIFULL</p>
+        <h1 class="text-orange-500 text-3xl font-serif italic">{{ headerTitle }}</h1>
+      </div>
+    </div>
+
+    <slot name="lifullHomes"></slot>
+    <div class="grid lg:grid-cols-5 md:grid-cols-5 sm:grid-cols-3">
+      <CommonHistroy></CommonHistroy>
+      <CommonLike></CommonLike>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/userInfo">UserInfo</RouterLink>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/index">Index</RouterLink>
+      <RouterLink :class="hiddenStyle" exact active-class="actice" class="links" style="margin: auto 0;" to="/lifullHomes">lifullHomes</RouterLink>
+      <CommonMenuBar class="lg:hidden md:hidden"></CommonMenuBar>
+    </div>
   </header>
-  <btnCom class="mr-3 mt-3" @click="firstClick" btn-name="clickして1"></btnCom>
-  <btnCom class="mr-3 mt-3" @click="secondClick" btn-name="clickして2"></btnCom>
-  <btnCom class="mr-3 mt-3" @click="theadClick" btn-name="clickして3"></btnCom>
-  <h1 class="text-3xl">{{ msg }}</h1>
 </template>
 
 <script>
-import btnCom from '@/components/atoms/buttons/BPrimaryBtn.vue'
+import CommonMenuBar from '@/components/molecules/CommonMenuBar'
+import CommonLike from '@/components/molecules/CommonLike'
+import CommonHistroy from '@/components/molecules/CommonHistroy'
 export default{
   data(){
     return {
       msg: "default",
+      hiddenStyle: [
+        "hidden",
+        "lg:inline-block",
+        "md:inline-block",
+      ]
     }
   },
   props: {
@@ -24,28 +43,29 @@ export default{
     }
   },
   components: {
-    btnCom,
+    CommonMenuBar,
+    CommonHistroy,
+    CommonLike,
   },
   methods: {
-    firstClick(){
-      this.msg='first';
-    },
-    secondClick(){
-      this.msg='second';
-    },
-    theadClick(){
-      this.msg='thead';
-    }
+
   }
 }
 
 </script>
 
-<style scoped>
+<style scoped lang="scss">
   header {
-    background-color: pink;
+    margin: 0 5%;
   }
   h1 {
     margin: 0;
+  }
+  .links {
+    color: blue;
+  }
+  .actice {
+    background-color: rgba(249, 168, 102, 0.3);
+    color: green
   }
 </style>
