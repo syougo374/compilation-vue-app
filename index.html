@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="form">
+    <input type="text" name="emp_id" id="emp_id" value=37>
+    <input type="button" name="btn" id="btn" value="送信">
+  </form>
+</body>
+<script>
+  const btn = document.querySelector("#btn");
+  const form = document.querySelector("#form");
+  btn.addEventListener("click",()=>{
+    let text = document.querySelector("#emp_id").value;
+    fetch("http://localhost:8080/sample/selectUser",{
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        emp_id: text,
+      })
+    }).then(response =>{
+      return response.json()
+      // console.log(result);
+    }).then(data => {
+      let lists = [];
+      Object.keys(data).forEach(key => {
+        let el = document.createElement("h1")
+        el.innerText = data[key];
+        form.appendChild(el);
+      });
+    })
+  })
+</script>
+</html>

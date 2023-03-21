@@ -52,7 +52,6 @@ export default({
   },
   methods: {
     getUserShow(e){
-      console.log(e);
       this.$router.push({name:"userShow",  query:{emp_id: e}});
     }
   }
